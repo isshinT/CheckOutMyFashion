@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Out My Fashion</title>
+    <meta name="description" content="俺のファッションを見ていけ。">
+
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" type="img/JPEG" href="img/icon.JPEG">
+</head>
+<body>
+    <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img/logo.JPEG" alt="COMFホーム"></a></h1>
+
+        <nav>
+            <ul class="main-nav">
+                <li><a href="search.html">SEARCH</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="profile.html"><img class="profile-icon" id="profile-icon" src="img/profile-icon.png" alt="Profileアイコン"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="home-content wrapper">
+        <img id="icon">
+        <h2 id="username"></h2>
+        <p id="email"></p>
+        
+    </div>
+
+    <script type="module" src="./js/firebase.js"></script>
+    <script type="module" src="./js/profile.js"></script>
+</body>
+</html>
