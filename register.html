@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Out My Fashion - register</title>
+    <meta name="description" content="俺のファッションを見ていけ。">
+
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" type="img/JPEG" href="img/icon.JPEG">
+</head>
+<body>
+    <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img/logo.JPEG" alt="COMFホーム"></a></h1>
+
+        <nav>
+            <ul class="main-nav">
+                <li><a href="search.html">SEARCH</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><img class="profile-icon" id="profile-icon" src="img/profile-icon.png" alt="Profileアイコン"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="other-content wrapper">
+        <h2 class="page-title">REGISTER</h2>
+    </div>
+    
+    <div class="register-from wrap">
+        <label for="email" class="form-label">メールアドレス：</label>
+        <input type="email" id="email" class="form-input" maxlength="60" required><br>
+
+        <label for="password" class="form-label">パスワード：</label>
+        <input type="password" id="password" class="form-input" maxlength="255" required><br>
+
+        <label for="username" class="form-label">ユーザー名：</label>
+        <input type="text" id="username" class="form-input" maxlength="20" required><br>
+
+        <label for="icon" class="form-label">アイコン画像：</label>
+        <input type="file" id="icon" accept="image/*" class="form-input" required><br>
+
+        <button id="register-btn" class="button">新規登録</button>
+    </div>
+
+    <script type="module" src="./js/firebase.js"></script>
+    <script type="module" src="./js/register.js"></script>
+    <script type="module" src="./js/authCheck.js"></script>
+</body>
+</html>
