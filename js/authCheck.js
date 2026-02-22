@@ -4,9 +4,9 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.9.0/fi
 document.getElementById("profile-icon").addEventListener("click", () => {
     onAuthStateChanged(auth, (user) => {
         if (user) {
-            window.location.href = "/profile.html";
+            window.location.href = "profile.html";
         } else {
-            window.location.href = "/register.html";
+            window.location.href = "register.html";
         }
     });
 });
