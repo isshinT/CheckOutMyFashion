@@ -7,9 +7,8 @@ document.getElementById("register-btn").addEventListener("click", async () => {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
   const username = document.getElementById("username").value.trim();
-  const iconFile = document.getElementById("icon").files[0];
 
-  if (!email || !password || !username || !iconFile) {
+  if (!email || !password || !username) {
     alert("すべての項目を入力してください");
     return;
   }
@@ -27,23 +26,18 @@ document.getElementById("register-btn").addEventListener("click", async () => {
     // Auth 登録
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
-
-    // アイコンアップロード
-    const iconRef = ref(storage, `icons/${user.uid}.png`);
-    await uploadBytes(iconRef, iconFile);
-    const iconURL = await getDownloadURL(iconRef);
-
+    
     // Firestore 保存
     await setDoc(doc(db, "users", user.uid), {
       username: username,
       email: email,
-      iconURL: iconURL,
       createdAt: new Date()
     });
 
     window.location.href = "profile.html";
 
   } catch (error) {
+    console.log("ERROR DETAIL:", error);
     if (error.code === "auth/email-already-in-use") {
       alert("このメールアドレスは既に登録されています");
       return;

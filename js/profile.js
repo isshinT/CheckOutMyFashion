@@ -19,5 +19,4 @@ onAuthStateChanged(auth, async (user) => {
 
   document.getElementById("username").textContent = data.username;
   document.getElementById("email").textContent = data.email;
-  document.getElementById("icon").src = data.iconURL;
 });
