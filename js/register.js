@@ -11,6 +11,7 @@ document.getElementById("register-btn").addEventListener("click", async () => {
 
   if (!email || !password || !username || !iconFile) {
     alert("すべての項目を入力してください");
+    return;
   }
 
   // ユーザー名重複チェック
@@ -19,6 +20,7 @@ document.getElementById("register-btn").addEventListener("click", async () => {
 
   if (!querySnapshot.empty) {
     alert("このユーザー名は既に使われています");
+    return;
   }
 
   try {
