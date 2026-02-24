@@ -1,7 +1,6 @@
-import { auth, db, storage } from "./firebase.js";
+import { auth, db } from "./firebase.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
 import { collection, query, where, getDocs, doc, setDoc } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js";
-import { ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-storage.js";
 
 document.getElementById("register-btn").addEventListener("click", async () => {
   const nickname = document.getElementById("nickname").value.trim();

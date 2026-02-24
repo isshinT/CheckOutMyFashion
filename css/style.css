@@ -146,3 +146,19 @@ img{
     border-radius: 6px;
     font-size: 1rem;
 }
+
+.form-input2{
+    width: 76%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    height: 8rem;
+}
+
+.main{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
