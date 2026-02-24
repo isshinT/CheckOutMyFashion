@@ -133,6 +133,11 @@ img{
     font-weight: bold;
 }
 
+.form-p {
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+
 .form-input {
     width: 60%;
     padding: 12px;

@@ -24,11 +24,24 @@
         </nav>
     </header>
 
-    <div class="home-content wrapper">
-        
+    <div class="other-content wrapper">
+        <h2 class="page-title">LOGIN</h2>
+    </div>
+
+    <div class="login-from wrap">
+        <label for="email" class="form-label">メールアドレス：</label>
+        <input type="text" id="email" class="form-input" maxlength="20" placeholder="helloworld" required><br>
+
+        <label for="password" class="form-label">パスワード：</label>
+        <input type="password" id="password" class="form-input" maxlength="255" required><br>
+
+        <button id="login-btn" class="button">ログイン</button>
+
+        <p class="form-p">新規登録を希望する方は<a href="register.html">こちら</a></p>
     </div>
 
     <script type="module" src="js/firebase.js"></script>
     <script type="module" src="js/authCheck.js"></script>
+    <script type="module" src="js/login.js"></script>
 </body>
 </html>

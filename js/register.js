@@ -4,11 +4,13 @@ import { collection, query, where, getDocs, doc, setDoc } from "https://www.gsta
 import { ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-storage.js";
 
 document.getElementById("register-btn").addEventListener("click", async () => {
+  const nickname = document.getElementById("nickname").value.trim();
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
   const username = document.getElementById("username").value.trim();
+  
 
-  if (!email || !password || !username) {
+  if (!nickname || !email || !password || !username) {
     alert("すべての項目を入力してください");
     return;
   }
@@ -29,8 +31,10 @@ document.getElementById("register-btn").addEventListener("click", async () => {
     
     // Firestore 保存
     await setDoc(doc(db, "users", user.uid), {
+      nickname: nickname,
       username: username,
       email: email,
+      password: password,
       createdAt: new Date()
     });
 

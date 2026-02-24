@@ -29,16 +29,21 @@
     </div>
     
     <div class="register-from wrap">
+        <label for="nickname" class="form-label">表示名：</label>
+        <input type="text" id="nickname" class="form-input" maxlength="8" placeholder="やまだ太郎" required><br>
+
         <label for="username" class="form-label">ユーザー名：</label>
-        <input type="text" id="username" class="form-input" maxlength="20" required><br>
-        
+        <input type="text" id="username" class="form-input" maxlength="20" placeholder="helloworld" required><br>
+
         <label for="email" class="form-label">メールアドレス：</label>
-        <input type="email" id="email" class="form-input" maxlength="60" required><br>
+        <input type="email" id="email" class="form-input" maxlength="60" placeholder="hello1234@mail.com" required><br>
 
         <label for="password" class="form-label">パスワード：</label>
         <input type="password" id="password" class="form-input" maxlength="255" required><br>
 
         <button id="register-btn" class="button">新規登録</button>
+
+        <p class="form-p">新規登録がお済の方は<a href="login.html">こちら</a></p>
     </div>
 
     <script type="module" src="js/firebase.js"></script>
