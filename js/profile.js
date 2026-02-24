@@ -18,7 +18,7 @@ onAuthStateChanged(auth, async (user) => {
   const data = userDoc.data();
 
   document.getElementById("username").textContent = data.username;
-  document.getElementById("email").textContent = data.email;
+  document.getElementById("nickname").textContent = data.nickname;
 });
 
 document.getElementById("logout-btn").addEventListener("click", async () => {
